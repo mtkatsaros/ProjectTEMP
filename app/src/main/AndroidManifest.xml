@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.covidtracker">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CovidTracker">
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.exposure.ExposureActivity"
+            android:label="exposure"
+            android:parentActivityName=".ui.login.LoginActivity"/>
+        <activity
+            android:name=".ui.status.StatusActivity"
+            android:label="status"
+            android:parentActivityName=".ui.exposure.ExposureActivity"/>
+        <activity
+            android:name=".ui.map.MapActivity"
+            android:label="map"
+            android:parentActivityName=".ui.status.StatusActivity"/>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="settings"
+            android:parentActivityName=".ui.map.MapActivity"/>
+    </application>
+
+</manifest>
