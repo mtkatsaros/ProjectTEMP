@@ -42,7 +42,6 @@ public class DBHelper {
     /*
     Creates a document for reading to onto the database.
     @param x, y coordinates to pass.
-    @return the temp value designated in the method.
      */
     public int getLocation() {
         final int[] temp = {0}; // Number of users if it doesn't exist.
